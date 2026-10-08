@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"id": 1, "name": "Xã A"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[105.8, 21.0], [105.81, 21.0], [105.81, 21.01], [105.8, 21.01], [105.8, 21.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"id": 2, "name": "Xã B"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[105.82, 21.0], [105.83, 21.0], [105.83, 21.01], [105.82, 21.01], [105.82, 21.0]]]
+      }
+    }
+  ]
+}
