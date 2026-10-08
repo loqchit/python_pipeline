@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: geodb
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d geodb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    volumes:
+      - ./output:/app/output
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sh -c "python main.py && pytest test_main.py"
+    environment:
+      - DB_HOST=db
+      - DB_USER=user
+      - DB_PASS=password
+      - DB_NAME=geodb
+      - DB_PORT=5432
