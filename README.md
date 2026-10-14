@@ -10,8 +10,8 @@ Mở Docker Desktop và chạy lệnh sau trong thư mục dự án:
 docker compose up --build
 ```
 
-Kết quả được lưu tại `output/stats.csv`, gồm 5.166 dòng dữ liệu.
+Kết quả được lưu tại `output/stats.csv`, input từ format của app fastcheck biến độ mất rừng.
 
 Container `app` kết thúc với mã `0` sau khi xử lý và kiểm thử thành công; cơ sở dữ liệu vẫn chạy.
 
-Chi tiết cập nhật: [CHANGELOG.md](CHANGELOG.md).
+
