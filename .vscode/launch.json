@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run minipipeline",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${env:LOCALAPPDATA}/Programs/Python/Python314/python.exe",
+            "program": "${workspaceFolder}/main.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Start minipipeline database",
+            "env": {
+                "DB_HOST": "127.0.0.1",
+                "DB_PORT": "5434",
+                "DB_USER": "user",
+                "DB_PASS": "password",
+                "DB_NAME": "geodb"
+            }
+        }
+    ]
+}
